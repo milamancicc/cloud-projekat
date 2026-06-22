@@ -68,8 +68,8 @@ resource "azurerm_container_group" "app" {
   container {
     name   = "backend"
     image  = docker_registry_image.backend.name
-    cpu    = "0.5"
-    memory = "1.0"
+    cpu    = "1.5"
+    memory = "1.5"
 
     ports {
       port     = 3000
