@@ -65,11 +65,16 @@ resource "azurerm_container_group" "app" {
   ip_address_type     = "Public"
   dns_name_label      = "cloud-final-mila"
 
+  tags = {
+    Environment = "Dev"
+    Service     = "media-app"
+  }
+
   container {
     name   = "backend"
     image  = docker_registry_image.backend.name
-    cpu    = "0.5"
-    memory = "1.0"
+    cpu    = "1.5"
+    memory = "1.5"
 
     ports {
       port     = 3000
