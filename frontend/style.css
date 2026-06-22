@@ -1,0 +1,541 @@
+body{
+    color: white;
+    background-color: #0F172A;
+    font-family:'Arial';
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
+    grid-template-areas: "head" "nav" "leg" "inst" "list" "tab" "top" "foot";
+    
+}
+
+
+
+h1, h2{
+    text-align: center;
+    font-family:'Roboto';
+
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    
+}
+.heading{
+    grid-area: head;
+}
+
+h2{
+    font-variant: small-caps;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+
+nav{
+    background-color: #020617;
+    border-radius: 10px;
+    margin: 15px 15px 15px 10px;
+    border: 2px solid rgb(0, 0, 0) ;
+    orphans:5;
+    widows:5;
+    grid-area: nav;
+    
+}
+nav a:visited{
+    color: #0F172A;
+}
+nav a:hover{
+    color: rgba(45, 119, 199, 0.511);
+    font-size: larger;
+}
+
+
+
+nav ul{
+    border:2px solid white;
+    border-radius: 10px;
+    margin: 15px 15px 15px 10px;
+    list-style: inside;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.633);
+    list-style-image: url("https://img.icons8.com/?size=16&id=7695&format=png");
+
+}
+.legend{
+    background: #020617;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 15px;
+    border: 2px solid rgb(0, 0, 0) ;
+    border-radius: 10px;
+    grid-area: leg;
+
+}
+
+
+
+#table{
+    background-color: #020617;
+    margin: 15px 15px 15px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    grid-area: tab;
+    
+}
+
+
+
+
+
+table, th, td{
+    caption-side: bottom;
+    background-color: #0F172A;
+    border-color: rgb(0, 0, 0);
+    border-style:solid;
+    border-spacing: 0px;
+    border-width: 2px;
+    margin: 35px 15px 15px 10px;
+    
+}
+
+
+th{
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: underline;
+}
+
+
+#formInstr{
+    background-image: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg");
+    background-repeat: repeat-x;
+    margin: 15px 15px 15px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+    grid-area: inst;
+}
+
+#formInstr > p{
+    font-style:italic;
+    text-indent: 10px;
+}
+dl{
+    background-color: rgba(255, 255, 255, 0.633);
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid white;
+
+}
+dt, nav a{
+    text-indent: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #0F172A;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+dd{
+    font: oblique 16px Arial;
+    color: #0F172A;
+    text-shadow: black 1px 0px;
+}
+
+caption{
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: 5px;
+}
+#addRow {
+    padding:1%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#formInstr ol{
+    list-style-type: lower-roman;
+    list-style-position: outside;
+}
+address{
+    font-size: small;
+    margin: 30px 15px;
+}
+a:link{
+    color: white;
+}
+address a:visited{
+    color: aqua;
+}
+
+
+.buttons{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#updateRow{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+ input[type="button"] {
+    width:100%;
+    height:45px;
+    font:bold 20px "Arial";
+    color: white;
+    background-color: #0e307e;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 1%;
+ }
+
+#openForm{
+    width:100%;
+    height:45px;
+    font:bold 20px "Arial";
+    color: white;
+    background-color: #0e307e9a;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 1%;
+}
+
+#openForm:active{
+    background-color: #020725;
+}
+
+
+input[type="submit"], input[type="reset"] {
+    width:100%;
+    height:45px;
+    font:bold 20px "Arial";
+    color: white;
+    background-color: #0e307e;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 1%;
+}
+
+#poster{
+    width: 100%;
+}
+#year{
+    width: 15%;
+}
+
+input[type="submit"]:active{
+    background-color: #036028;
+}
+
+input[type="button"]:active{
+    background-color: rgb(89, 179, 209);
+}
+
+input[type="reset"]:active{
+    background-color: #600303;
+}
+
+input[type="text"], input[type="number"], #genre, #description{
+    border-radius: 10px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, #genre:focus, #description:focus{
+    background-color: #0e307ed6;
+    color: white;
+}
+.mostpopular{
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #020617;
+    grid-area: top;
+}
+
+address {
+    padding: 4px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+.mostpopular>ol {
+    list-style: decimal inside;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.mostpopular ol img{
+    display:block;
+    width:80px;
+    border-radius: 5px;
+    border: 5px solid white;
+}
+
+.mostpopular ol li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+}
+.mostpopular li span{
+    margin: 10px;
+}
+
+.mostpopular ol img:hover{
+    width: 100px;
+}
+
+footer{
+    font-size: 15px;
+    grid-area: foot;
+}
+
+
+
+@media print{
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .legend{
+        width: 100%;
+    }
+    .noprint{
+        display: none;
+    }
+     #table {
+        width: 90%;
+        margin: 20px auto;
+        border: none;
+        page-break-before: always;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 12pt;
+    }
+    tr{
+        page-break-after: always;
+    }
+    #table img{
+        width: 150px;
+        height: auto;
+    }
+
+    .mostpopular {
+        width: 100%;
+    }
+    footer{
+        align-self: flex-start;
+    }
+
+}
+
+
+.noshow{
+    display: none;
+}
+
+#yearList li:hover{
+    cursor: pointer;
+    font-size: x-large;
+    border: 2px solid #0F172A;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+#whatYear{
+    color: #0F172A;
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#search{
+    height: 45px;
+    border-radius: 40px;
+    width: 50%;
+}
+
+#searchDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+#whatYear p{
+    display: inline;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.501);
+    border-radius: 20px;
+    padding: 1%;
+}
+
+table img {
+
+    float: inherit;
+    vertical-align:middle;
+    border-radius: 5px;
+    border: 5px solid white;
+    width: 50%;
+    /* height: auto; */
+    height: 100%;
+}
+table img:hover{
+    cursor: pointer;
+}
+
+.copyright{
+    font-size: x-small;
+}
+
+a:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus, #openForm:focus, #search:focus{
+    outline: 3px solid white;
+}
+
+
+
+
+@media all and (min-width: 710px){
+    body{
+        grid-template-areas:"head head" 
+                            "nav nav"
+                            "leg inst"
+                            "list list"
+                            "tab tab"
+                            "top top"
+                            "foot foot";
+    }
+}
+
+@media all and (max-width: 1380px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+
+    thead{
+        display: none;
+    }
+    table, tbody, tr{
+        display: block;
+        width:98%;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+    #whatYear p{
+        font-size: medium;
+    }
+    
+    tr{
+        border: 2px solid white;
+        
+    }
+    td{
+        border:none;
+        display: flex;
+        margin: 3%;
+        
+    }
+    td > strong{
+        font-size: x-large;
+    }
+    table img{
+        width: 30vw;
+    }
+    table caption{
+        caption-side: top;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2%;
+    } 
+    #addRow{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1%; 
+    }
+}
+
+#formModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: #020725;
+    background-color: rgba(0,0,0,0.4);
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+
+}
+
+#modal-content{
+    margin: 15% auto;
+    /* width:100%; */
+    padding: 20px;
+    
+}
+
+.close{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    background-color: rgb(175, 17, 17);
+    border-radius: 40px;
+    
+}
+.close:hover{
+    cursor: pointer;
+}
+
+#yearList{
+    list-style-type: "-";
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    border:2px solid white;
+    border-radius: 10px;
+    margin: 15px 15px 8px 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.633);
+}
+#yearList li{
+    margin: 1%;
+    color: #0F172A;
+    font-weight: 200;
+    font-size: large;
+}
+
+#yearListSec{
+    background-color: #020617;
+    border-radius: 10px;
+    margin: 15px 15px 15px 15px;
+    border: 2px solid rgb(0, 0, 0) ;
+    grid-area: list;
+}

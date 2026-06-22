@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Movie Catalog</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" async></script>
+    </head>
+    <body>
+        <h1 class="heading">Movie Catalog</h1>
+        <nav class="noprint">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#legend">Table Legend</a></li>
+                <li><a href="#formInstr">Fill-in form-Instructions</a></li>
+                <li><a href="#table">Movie Table</a></li>
+                <li><a href="#mostpopular">Most popular movies of the last decade</a></li>
+            </ul>
+
+
+        </nav>
+        <section class="legend" id="legend">
+            <h2>Table Legend</h2>
+            <dl>
+                <dt>Poster</dt>
+                <dd>Link of poster/image</dd>
+                <dt>Name</dt>
+                <dd>Title of the movie</dd>
+                <dt>Year</dt>
+                <dd>Year of release</dd>
+                <dt>Genre</dt>
+                <dd>Genre of movie</dd>
+                <dt>Description</dt>
+                <dd>Short description of movie</dd>
+            </dl>
+        </section>
+        <section id="formInstr" class="noprint">
+            <h2>Instructions to fill in the form</h2>
+            <p>Here is a little helper for filling the form in the table:</p>
+            <ol>
+                <li>Click the button Form to open the form</li>
+                <li>Enter the URL of the poster of the chosen movie.</li>
+                <li>Enter the full name of the chosen movie.</li>
+                <li>Enter the year of the release of the chosen movie.</li>
+                <li>Enter the genre of the chosen movie.</li>
+                <li>Enter a short description of the chosen movie.</li>
+            </ol>
+            <button id="openForm">Form</button>
+            <div id="formModal">
+                <div class="modal-content">
+                    <span class = "close">&times;</span>
+                    <form id="form">
+                            <div class="noprint" id = "addRow">
+                                <input type="text" name="poster" id="poster" placeholder="URL for the poster" required>
+                                <input type="text" name="name" id="name" placeholder="Name" required>
+                                <input type="number" name="year" id="year" placeholder="Year" min="1800" max="2026" required>
+                                <input type="text" name="genre" id="genre" placeholder="Genre" required>
+                                <textarea name="description" id="description" rows=4 cols=40 placeholder="Description of the movie" required></textarea>
+                            </div>
+                            <div class="buttons" id="buttons">
+                                <input type="submit" class="noprint" id="submit">
+                            </div>
+                            <div id="updateRow">
+
+                            </div>
+                    </form>       
+                </div>
+            </div>
+
+        </section>
+
+        <section id="yearListSec" class="noprint">
+            <h2>Filter the table by year</h2>
+            <div>
+                <ul id="yearList">
+
+                </ul>
+            </div>
+            <div id="searchDiv"><input type="text" name="search" id="search" placeholder="Search for name or genre"></div>
+            <div id="whatYear"></div>
+        </section>
+
+        <section id="table" >
+            <h2>Movie Table</h2>
+
+                <table class="movietable" id="movietable">
+                
+                    <thead>
+                        <tr>
+                            <th>poster</th>
+                            <th>name</th>
+                            <th>year</th>
+                            <th>genre</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                    </tbody>  
+                </table>
+                
+            <input type="reset" class="noprint" id="reset">
+            
+        </section>
+        
+
+        <section class="mostpopular" id="mostpopular">
+            <h2>Most popular movies of the last decade</h2>
+            <ol>
+                <li><img src="https://th.bing.com/th/id/OIP.b8WjJA8J2IJgblXaSliy3QHaLH?w=116&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Inception poster">
+                    <span>Inception</span>
+                </li>
+                <li><img src="https://th.bing.com/th/id/OIP.Jzu68Oz2wPa5w2QFpygiYwHaLH?w=115&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Toy Story 3 poster">
+                    <span>Toy Story 3</span>
+                </li>
+                <li><img src="https://th.bing.com/th/id/OIP.1n3EUvGBiWOf8cwNyR0i7AHaLG?w=119&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="The Social Network poster">
+                    <span>The Social Network</span>
+                </li>
+                <li><img src="https://th.bing.com/th/id/R.7887af91d87687ab6fddb3500a66326e?rik=FjlSeMP7WxOtmw&riu=http%3a%2f%2fwww.007.com%2fwp-content%2fuploads%2f2012%2f05%2fSKY_DIGI_ONLN_TSR_1SHT_1_0514_RGB_300_1.jpg&ehk=wYkQG3q53HIINypw%2f3xtu%2bJPR6%2fLnZPS%2bonZHMu8RLQ%3d&risl=&pid=ImgRaw&r=0" alt="Skyfall poster">
+                    <span>Skyfall</span>
+                </li>
+                <li><img src="https://th.bing.com/th/id/OIP.uRGDp5q_BYHPzeIvZ8oI5AHaKj?w=125&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3" alt="Gravity poster">
+                    <span>Gravity</span>
+                </li>
+            </ol>
+
+
+        </section>
+        <footer>
+            <address>
+                <p>If you are interested in more information about movies visit <a href="https://www.imdb.com/">IMDB's website.</a></p>
+                <p>1600 Pennsylvania Avenue Northwest</p>
+                <p>Washington, DC 20500</p>
+
+            </address>
+            <p class="copyright">&copy;Movie Catalog Website 2026</p>
+        </footer>
+
+    </body>
+
+</html>
